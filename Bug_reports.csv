@@ -1,0 +1,293 @@
+﻿"Issue Id","Project","Tags","Summary","Reporter","Created","Updated","Resolved","Priority","Type","State","Assignee","Sprints","Ideal days","Original estimation","Story points","Environment","Description","Votes"
+"G41-117","group4.1","Star","The ""Payment information"": Successful  payment for type oh the card Visa, Mastercard, Amex if the status of the card is ""Transaction not permitted to CH""","Ekaterina Soldatova","11 Apr 2023","26 May 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Mastercard
+10. Input the field ""Cardholder name"", example TEST (data of the Mastercard card, status of the card ""Transaction not permitted to CH"")
+11. Input the field ""Card number"", example 5124585563456201 (data of the Mastercard card, status of the card ""Transaction not permitted to CH"")
+12. Input the field ""Expiration date"", example 12/2025 (data of the Mastercard card, status of the card ""Transaction not permitted to CH"")
+13. Input the field ""Card code"", example 123 (data of the Mastercard card, status of the card ""Transaction not permitted to CH"")
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if user filled data of the card with status ""Transaction not permitted to CH""
+
+Expected result: Payment is failed  if user filled data of the card with status ""Transaction not permitted to CH""","0"
+"G41-122","group4.1","Star","The field ""Cardholder name"": the error message isn't shown if any cyrillic or numbers or special characters or latin in lowercase is inputted","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Input the field ""Cardholder name"", example any numbers
+10. Click on the button ""Continue"" and see result
+11. Input the field ""Cardholder name"", example any special characters
+12. Click on the button ""Continue"" and see result
+13. Input the field ""Cardholder name"", example any cyrillic
+14. Click on the button ""Continue"" and see result
+15. Input the field ""Cardholder name"", example any latin in lowercase
+16. Click on the button ""Continue"" and see result
+
+Actual result: The error message isn't shown if any cyrillic or numbers or special characters or latin in lowercase is inputted
+
+Expected result: The error message is shown if any cyrillic or numbers or special characters or latin in lowercase is inputted","0"
+"G41-121","group4.1","Star","Field ""Cardholder name"", ""Card number"", ""Card code"": Error message isn't disappeared if the error were corrected in the field ""Cardholder name"", ""Card number"", ""Card code""","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. The fields ""Cardholder name"" , ""Card number"", ""Expiration date"", ""Card code""  leave empty 
+11. Click on the button ""Continue""
+12. See on the error message
+13. Input the fields ""Cardholder name"" , ""Card number"", ""Expiration date"", ""Card code"" data ( example TEST, 4627100101654724, 12/2025, 123)
+14. Click on the button ""Continue""
+15. Click on the button ""Back"" on the part of the ""Confirm order""
+16. See on the error message
+
+Actual result: The error message isn't disappeared if the errors were corrected on the fields by clicking on the button ""Continue"" on the part of the ""Payment information""
+
+Expected result: The error message is disappeared if the errors were corrected on the fields by clicking on the button ""Continue"" on the part of the ""Payment information""","0"
+"G41-120","group4.1","Star","The field ""Card code"": Successful payment if the field ""Card code"" is filled zeros","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"", example 4627100101654724 (data of the Visa card)
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input the field ""Card code"" 0000
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if the field ""Card code"" is filled 0000
+
+Expected result: Payment is failed if the field ""Card code"" is filled 0000","0"
+"G41-119","group4.1","Star","The field ""Card Number"": Successful payment if the field ""Card number"" is filled zeros","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to the  shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"", example 0000000000000000
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input the field ""Card code"", example 123 (data of the Visa card)
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if the field ""Card number"" is filled  0000000000000000
+
+Expected result: Payment is failed if the field ""Card number"" is filled  0000000000000000","0"
+"G41-118","group4.1","Star","The field ""Card Number"": Successful payment  if  the field ""Card number"" is filled 0","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to  the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"" 0
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input the field ""Card code"", example 123 (data of the Visa card)
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if the field ""Card number"" is filled 0
+
+Expected result: Payment is failed  if the field ""Card number"" is filled 0","0"
+"G41-116","group4.1","Star","The ""Payment information"": Successful payment for type of the card Visa, Mastercard, Amex if the card doesn't have insufficient funds","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card, the card has insufficient funds)
+11. Input the field ""Card number"", example 4486441729154030 (data of the Visa card, the card has insufficient funds)
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card, the card has insufficient funds)
+13. Input the field ""Card code"", example 123 (data of the Visa card, the card has insufficient funds)
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if user filled data of the card with insufficient funds
+
+Expected result: Payment is failed  if user filled data of the card with insufficient funds","0"
+"G41-115","group4.1","Star","The ""Payment information"": Successful payment for type of the card Visa, Mastercard, Amex if the status of the card is ""Pick up. Stolen card""","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add product to  the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card, status of the card ""Pick up. Stolen card"")
+11. Input the field ""Card number"", example 4486441729154030 (data of the Visa card, status of the card ""Pick up. Stolen card"")
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card, status of the card ""Pick up. Stolen card"")
+13. Input the field ""Card code"", example 123 (data of the Visa card, status of the card ""Pick up. Stolen card"")
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if user filled  data of the stolen card
+
+Expected result: Payment is failed if user filled  data of the stolen card","0"
+"G41-114","group4.1","Star","The ""Payment information"": Successful payment if user set the field ""Card code"" wrong  data for particular card, other fields are filled actual data of the card","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa (data of the Visa card)
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"", example 4627100101654724 (data of the Visa card)
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input wrong card code in the field ""Card code"", example 456
+14. Click on the button ""Continue""
+
+Actual result: Successful payment if user filled wrong number of the card  code on the field ""Card code""
+
+Expected result: Payment is failed if user filled wrong number of the card code on the field ""Card code""","0"
+"G41-113","group4.1","Star","The ""Payment information"": Successful payment if user filled the field ""Expiration date"" wrong data for particular card, other fields are filled actual data of the card","Ekaterina Soldatova","11 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to the shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa (data of the Visa card)
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"", example 4627100101654724 (data of the Visa card)
+12. Input the field ""Expiration date"", wrong data ""Expiration date"", example 05/2030
+13. Input the field ""Card code"", example 123 (data of the Visa card)
+14. Click on the button ""Continue""
+
+Actual result: Successful payment  if user choose wrong  expiration date of the card on the field ""Expiration date""
+
+Expected result: Payment is failed if user choose wrong  expiration date of the card on the field ""Expiration date""","0"
+"G41-112","group4.1","Star","The ""Payment information"": Successful payment if user filled the field ""Card number"" wrong data for particular card, other fields are filled actual data of the card","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select type of the field ""Select credit card"", example Visa (data of the Visa card)
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"" wrong data, example 4627100101654724 (data of the Mastercard card)
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input the field ""Card code"", example 123 (data of the Visa card)
+14. Click on the button ""Continue""
+
+Actual result:  Successful payment if user filled wrong number of the credit card on the field ""Card Number""
+
+Expected result: Payment is failed if user filled wrong number of the credit card on the field ""Card Number""","0"
+"G41-111","group4.1","Star","The ""Payment information"": Successful payment if user choose type of the field ""Select credit card"" wrong for particular card, other fields are filled actual data of the card","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Critical","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select type of the field ""Select credit card"", example Mastercard
+10. Input the field ""Cardholder name"", example TEST (data of the Visa card)
+11. Input the field ""Card number"", example 4627100101654724 (data of the Visa card)
+12. Input the field ""Expiration date"", example 12/2025 (data of the Visa card)
+13. Input the field ""Card code"", example 123 (data of the Visa card)
+14. Click on the button ""Continue""
+
+Actual result: Successful payment  if user choose wrong type of the credit card on the field ""Select credit card""
+
+Expected result: The payment is failed  if user choose wrong type of the credit card on the field ""Select credit card""","0"
+"G41-110","group4.1","Star","The field ""Card number"": the error message isn't if before the number card is set minus","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Minor","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add any product to shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Input the field ""Card number"", example -4627100101654724
+10. Click on the button ""Continue""
+
+Actual result: The error message isn't shown if user set ""Card number"" -4627100101654724
+
+Expected result: The error message is shown if user set ""Card number"" -4627100101654724","0"
+"G41-109","group4.1","Star","The field ""Expiration date"": The error message isn't shown if in the field  ""Expiration date"" is set date from the past","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Do Log in
+ 3. Add 1 items to shopping cart
+ 4. Go to shopping cart
+ 5. Check the terms of service
+ 6. Click on the button ""Check out""
+ 7. Fill data in part ""Billing Address"", ""Shipping Address"", ""Shipping Method"" of the checkout
+ 8. Choose ""Credit card"" on the part ""Payment Method"" of the checkout
+ 9. Select the field ""Select credit card"", example Visa
+10. Input the field ""Cardholder name"", example TEST
+11. Input the field ""Card number"", example 4627100101654724
+12. Input the field ""Expiration date"", example 01/2023 or 02/2023
+13. Input the field ""Card code"", example 123
+14. Click on the button ""Continue""
+
+Actual result: The error message isn't shown if user set date from the past
+
+Expected result: The error message is shown if user set date from the past","0"
+"G41-108","group4.1","Star","Estimate shipping: Information about estimate shipping isn't change if user choose different country","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2"," 1. Go to page <https://demowebshop.tricentis.com/>
+ 2. Add any product to the shopping cart
+ 3. Click on the link ""Shopping cart"" on the pop-up message ""Product has been added to your shopping cart""
+ 4. Go to part ""Estimate shipping"" on the shopping cart
+ 5. Choose any country, example US
+ 6. Click on the button ""Estimate shipping""
+ 7. See on the result
+ 8. Choose another country, example Germany
+ 9. Click on the button ""Estimate shipping""
+10. See on the result
+
+Actual result: Information about estimate shipping isn't changed for different country
+
+Expected result: Information about estimate shipping should be actual for different country","0"
+"G41-107","group4.1","Star","The button ""Estimate shipping"": The button ""Estimate shipping"" is available and working if  required field ""Country"" isn't chosen","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Normal","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2","1. Go to page <https://demowebshop.tricentis.com/>
+
+2. Add 1 product to the shopping cart
+
+3. Click on the link ""Shopping cart"" on the pop-up message ""Product has been added to your shopping cart""
+
+4. Go to part ""Estimate shipping"" on the shopping cart
+
+5. The field ""Country"" leave ""Select Country""
+
+6. Click on the button ""Estimate shipping""
+
+   Actual result: User can see information about Estimate shipping if required field ""Country"" isn't filled
+
+   Expected result: The button ""Estimate result"" isn't available or the error message shown if required field ""Country"" isn't filled ","0"
+"G41-106","group4.1","Star","Pop-up shopping cart: don't scroll shopping list if more 5 items is added to shopping cart","Ekaterina Soldatova","10 Apr 2023","12 Apr 2023",,"Major","Bug","Open","Unassigned","Unscheduled",,,,"Browser Google Chrome 111.0.5563.65, OS Windows 11 Version 22H2","1. Go to page <https://demowebshop.tricentis.com/>
+
+2. Add 7 items to the shopping cart
+
+3. Hover on the link of the shopping cart on the in the top right menu
+
+4. Try to scroll the shopping list
+
+   Actual result: User can't scroll the shopping list on the pop-up shopping cart
+
+   Expected result: User can scroll and see whole the shopping list","0"
